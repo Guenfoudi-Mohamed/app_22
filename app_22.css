@@ -5,8 +5,12 @@
 html, body{height: 100%;}
 body{margin:0px auto;background-color: #030303;}
 body #container{width: 100%;max-width: 1440px;height: inherit;margin: 0px auto;display: flex;justify-content: center;align-items: center;}
-body #container .box{--width:450px; width:var(--width); height: 300px;resize: none;}
+body #container .box{--width:450px;width:var(--width); height: 300px;resize: none;}
 body #container .box textarea{border: none;width: 100%;max-width: var(--width);height: 100%;background-image: url('images/img.jpg');--bgImageSize:650px; background-size: var(--bgImageSize) 100%;background-position-x: calc(calc(650px - 450px) / -2); background-repeat: no-repeat;}
 body #container .b0{position: absolute;}
 body #container .b0 textarea{filter: grayscale(90%);resize: none;}
 body #container .b1 textarea{resize:horizontal;border-right: 3px solid #fff;position: relative;z-index: 1;}
+@media (max-width:490px){
+    body #container .box{--width:280px;}
+    body #container .box textarea{--bgImageSize:480px;}
+}
